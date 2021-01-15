@@ -22,19 +22,31 @@ namespace MathProblems
 
                 int number1 = random.Next(0, 9);
                 int number2 = random.Next(0, 9);
-                if (number1 + number2 > 9)
+                int number3 = random.Next(7, 9);
+
+
+
+                string output = "";
+
+                if (number3 >= number1 + number2)
                 {
-                    continue;
+                    output = number3 + " - " + number2 + " + " + number1;
                 }
-                int number3 = random.Next(0, number2 + number1);
-                string output = number1 + " + " + number2 + " - " + number3;
+                else
+                {
+                    output = number1 + " + " + number2 + " - " + number3;
+                }
+
+                /// Value Zero = Addition
+
+
                 if (!finalList.Contains(output))
                 {
                     finalList.Add(output);
                     counter += 1;
                 }
 
-                if (counter >= 0 && counter % 20 == 0)
+                if (counter >= 0 && counter % 15 == 0)
                 {
                     string filePath = Path.Combine(@"C:\Temp\", fileCount.ToString("00") + "AddAndSubtractThreeDigitNumber.txt");
                     File.WriteAllLines(filePath, finalList);
