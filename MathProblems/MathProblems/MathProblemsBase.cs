@@ -10,6 +10,7 @@ namespace MathProblems
         protected readonly string _OneDigitOperation = "";
         protected readonly string _OneDigitAndTwoDigitOperation = "";
         protected readonly string _TwoDigitOperation = "";
+        protected readonly string _TwoDigitMissingOperation = "";
         protected const string OneDigitSeprator = "__";
         protected const string TwoDigitSeprator = "____";
         protected const string EqualTo = " = ";
@@ -39,10 +40,15 @@ namespace MathProblems
             {
                 Directory.CreateDirectory(_OneDigitAndTwoDigitOperation);
             }
-            _TwoDigitOperation = Path.Combine(addtionBasePath, nameof(TwoDigitiOperation));
+            _TwoDigitOperation = Path.Combine(addtionBasePath, nameof(TwoDigitOperation));
             if (!Directory.Exists(_TwoDigitOperation))
             {
                 Directory.CreateDirectory(_TwoDigitOperation);
+            }
+            _TwoDigitMissingOperation = Path.Combine(addtionBasePath, nameof(TwoDigitMissingOperation));
+            if (!Directory.Exists(_TwoDigitMissingOperation))
+            {
+                Directory.CreateDirectory(_TwoDigitMissingOperation);
             }
 
         }
@@ -50,8 +56,8 @@ namespace MathProblems
         {
             return @operator;
         }
-
-        public virtual void TwoDigitiOperation() { }
+        public virtual void TwoDigitMissingOperation() { }
+        public virtual void TwoDigitOperation() { }
         public virtual void OneDigitAndTwoDigitOperation() { }
         public virtual void MissingNumberOneDigit()
         {

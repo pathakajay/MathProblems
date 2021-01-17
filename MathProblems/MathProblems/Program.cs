@@ -12,10 +12,10 @@ namespace MathProblems
         static void Main(string[] args)
         {
             Addition addition = new Addition();
-            addition.MissingNumberOneDigit();
-            addition.OneDigitAndTwoDigitOperation();
-            addition.TwoDigitiOperation();
-            addition.OneDigitOperation();
+            //addition.MissingNumberOneDigit();
+            //addition.OneDigitAndTwoDigitOperation();
+            addition.TwoDigitMissingOperation();
+            //addition.OneDigitOperation();
 
         }
 
